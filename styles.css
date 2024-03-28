@@ -116,7 +116,7 @@ img {
 
 /* PROJECTS */
 .projects {
-    padding: 10rem 2rem;
+    padding: 10rem 2rem 5rem;
     background-color: var(--bg-color-projects);
     text-align: center;
 }
