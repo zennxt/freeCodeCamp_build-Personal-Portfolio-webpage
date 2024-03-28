@@ -1,6 +1,6 @@
 :root {
-    --bg-color-navbar: #be3144;
-    --bg-color-welcome-section: #1c2229;
+    --bg-main-red: #be3144;
+    --bg-gray: #1c2229;
     --bg-color-projects: #45567d;
     --white-color: #f0f0f0;
 }
@@ -63,14 +63,15 @@ img {
 }
 
 /* NAVIGATION */
-.navbar-section {
+.navbar {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--bg-color-navbar);
+    z-index: 99;
+    background-color: var(--bg-main-red);
 }
 
 .navbar__list {
@@ -91,14 +92,14 @@ img {
 }
 
 /* WELCOME */
-.welcome-section {
+.welcome {
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-color-welcome-section);
+    background-color: var(--bg-gray);
 }
 
 .welcome__heading,
@@ -110,10 +111,83 @@ img {
     font-size: 3rem;
     font-weight: 200;
     font-style: italic;
-    color: var(--bg-color-navbar);
+    color: var(--bg-main-red);
 }
 
 /* PROJECTS */
-.projects-section {
+.projects {
+    padding: 10rem 2rem;
     background-color: var(--bg-color-projects);
+    text-align: center;
+}
+
+/* Projects container */
+.projects__container {
+    margin: 6rem auto 0;
+    width: 100%;
+    max-width: 128rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 4rem;
+}
+
+.projects__item {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.projects__wrap-img {
+    overflow: hidden;
+}
+
+.projects__img {
+    height: 30rem;
+    transition: 0.25s;
+}
+
+.projects__item:hover .projects__img {
+    transform: scale(1.05);
+}
+
+.projects__title {
+    padding: 2rem 0.5rem;
+    font-size: 2rem;
+    background-color: var(--bg-gray);
+}
+
+.projects__title-effect {
+    color: var(--bg-gray);
+    transition: 0.3s ease-out;
+}
+
+.projects__item:hover .projects__title-effect {
+    color: #ff7f50;
+}
+
+/* Projects button */
+.projects__btn {
+    display: inline-block;
+    margin-top: 4rem;
+    padding: 1.2rem 3rem;
+    border-radius: 5px;
+    background-color: var(--bg-gray);
+
+    font-size: 2rem;
+
+    transition: 0.3s ease-out;
+}
+.projects__btn:hover {
+    background-color: var(--bg-main-red);
+}
+
+.projects__btn-icon-effect {
+    margin-left: 7px;
+    transition: 0.3s ease-out;
+}
+
+.projects__btn:hover .projects__btn-icon-effect {
+    transform: translateX(3px);
 }
