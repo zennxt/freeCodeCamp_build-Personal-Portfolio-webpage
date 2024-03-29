@@ -136,7 +136,7 @@ img {
 
 .projects__item {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    border-radius: 12px;
 }
 
 .projects__wrap-img {
@@ -153,6 +153,9 @@ img {
 }
 
 .projects__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 2rem 0.5rem;
     font-size: 2rem;
     background-color: var(--bg-gray);
@@ -190,4 +193,31 @@ img {
 
 .projects__btn:hover .projects__btn-icon-effect {
     transform: translateX(3px);
+}
+
+/* FOOTER */
+.footer {
+    padding: 5rem 2rem;
+    border-top: 0.5rem solid var(--bg-main-red);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    background-color: var(--bg-gray);
+}
+
+.footer__copyright-link:hover {
+    color: var(--bg-main-red);
+    transition: 0.3s ease-out;
+}
+
+/* RESPONSIVE */
+/* Tablet */
+@media only screen and (max-width: 46.25rem) {
+    html {
+        font-size: 55%;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
 }
